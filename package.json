@@ -1,0 +1,9 @@
+{
+  "name": "tennis-court-watchman",
+  "version": "1.0.0",
+  "description": "Serverless application to notify Slack of unreserved tennis court",
+  "main": "index.js",
+  "repository": "git@github.com:mokuo/tennis-court-watchman.git",
+  "author": "mokuo <tennis10988.yk@gmail.com>",
+  "license": "MIT"
+}
