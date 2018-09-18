@@ -4,12 +4,12 @@ Description: >
     tennis-court-watchman
 
     Sample SAM Template for tennis-court-watchman
-    
+
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
     Function:
         Timeout: 3
-
+        Runtime: nodejs8.10
 
 Resources:
 
@@ -28,6 +28,20 @@ Resources:
                     Properties:
                         Path: /hello
                         Method: get
+
+    WatchShinjukuFunction:
+        Type: AWS::Serverless::Function
+        Properties:
+            CodeUri: scripts/
+            Handler: shinjuku.handler
+            Events:
+                WatchShinjuku:
+                    Type: CloudWatchEvent
+                    Properties:
+                        Pattern:
+                            detail:
+                                state:
+                                    - terminated
 
 Outputs:
 
