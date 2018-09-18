@@ -15,7 +15,6 @@
     "eslint-plugin-import": "^2.14.0"
   },
   "dependencies": {
-    "@serverless-chrome/lambda": "^1.0.0-55",
-    "puppeteer-core": "^1.8.0"
+    "puppeteer": "^1.8.0"
   }
 }
